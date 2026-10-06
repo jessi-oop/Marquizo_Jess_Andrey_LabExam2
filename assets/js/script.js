@@ -6,22 +6,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /* ── Password toggle ── */
+    // lucide.createIcons() replaces <i data-lucide> with an <svg>, so we
+    // can't query the <i> after the first render. Instead we track the
+    // current icon name on the button with data-icon and rebuild the <i>
+    // each time before calling createIcons() again.
 
     document.querySelectorAll('.eye-btn').forEach(function (btn) {
+        // Start hidden (eye-off)
+        btn.dataset.icon = 'eye-off';
+
         btn.addEventListener('click', function () {
             var input = btn.closest('.input-wrap').querySelector('input');
-            var icon  = btn.querySelector('i');
-            if (!input || !icon) return;
+            if (!input) return;
 
+            // Toggle input type and icon name
             if (input.type === 'password') {
-                input.type = 'text';
-                icon.setAttribute('data-lucide', 'eye');
+                input.type       = 'text';
+                btn.dataset.icon = 'eye';
             } else {
-                input.type = 'password';
-                icon.setAttribute('data-lucide', 'eye-off');
+                input.type       = 'password';
+                btn.dataset.icon = 'eye-off';
             }
 
-            // Re-render so Lucide picks up the new icon name
+            // Replace whatever Lucide rendered with a fresh <i> then re-render
+            btn.innerHTML = '<i data-lucide="' + btn.dataset.icon + '"></i>';
             lucide.createIcons();
         });
     });

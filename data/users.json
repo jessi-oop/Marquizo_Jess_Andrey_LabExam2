@@ -5,5 +5,26 @@
         "email": "jess@gmail.com",
         "password_hash": "$2y$12$uqNdzv51.s4RdhXMHq62ResfiTIHFRNrjA.5tbRLOdwUjU1Czzrhu",
         "registered_at": "2026-10-06 14:17:03"
+    },
+    {
+        "id": "usr_6ac50e904f8136.31643493",
+        "fullname": "Jess Andrey Marquizo",
+        "email": "anjing@gmail.com",
+        "password_hash": "$2y$12$wfy8BmU95OuQHgyW6z0ySejV8ePIbTR3.JRJ251YS7fqY7fVHqhVS",
+        "registered_at": "2026-10-06 15:06:56"
+    },
+    {
+        "id": "usr_6ac50f0feb6372.65068520",
+        "fullname": "John Doe",
+        "email": "dawg@gmail.com",
+        "password_hash": "$2y$12$Nx4wQSlSuBossNd5GW5iJeM3aBqAMBfve2yRqAmZowK\/2iCZRrfzW",
+        "registered_at": "2026-10-06 15:09:04"
+    },
+    {
+        "id": "usr_6ac50f7333d607.52129973",
+        "fullname": "John Cruz",
+        "email": "cruz@gmail.com",
+        "password_hash": "$2y$12$ZWiJ2daoXnT1IVzO6XJpeO.WSuTPKpDZiy8R4.xpuaSccU.v.BFda",
+        "registered_at": "2026-10-06 15:10:43"
     }
 ]
